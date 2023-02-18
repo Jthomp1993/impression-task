@@ -25,6 +25,7 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         height: 100%;
+        min-height: 150vh;
         background-color: var(--dark-purple);
         overflow-x: hidden;
         -moz-osx-font-smoothing: grayscale;
