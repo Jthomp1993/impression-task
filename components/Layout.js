@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Banner from "@/components/Banner";
+import Navbar from "@/components/Navbar";
 
 function Layout({ title, keywords, description, children}) {
   return (
@@ -10,7 +11,11 @@ function Layout({ title, keywords, description, children}) {
             <meta name='description' content={description} />
             <meta name='keywords' content={keywords} />
         </Head>
+        <div className="navigation">
         <Banner />
+        <Navbar />
+        </div>
+        
 
         {children}
     </div>

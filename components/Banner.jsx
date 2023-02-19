@@ -5,7 +5,6 @@ const StyledBanner = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
     width: 100%;
     background-color: var(--light-purple);
     margin: 0;
@@ -27,7 +26,7 @@ const StyledBanner = styled.div`
         font-size: 16px;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
         p {
             margin: 10px 0;
             font-size: 16px;

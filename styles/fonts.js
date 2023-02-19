@@ -17,7 +17,7 @@ const fonts = css`
 
     @font-face {
         font-family: 'DMSans';
-        src: url('/fonts/DMSans-Bold.ttf') format('ttf');
+        src: url('/fonts/DMSans-Bold.woff') format('woff');
         font-weight: 800;
         font-style: normal;
     }
