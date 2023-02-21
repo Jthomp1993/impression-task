@@ -39,6 +39,7 @@ const GlobalStyle = createGlobalStyle`
         .navigation {
             position: fixed;
             width: 100%;
+            z-index: 999999;
         }
 
         .pill__btn {
@@ -54,8 +55,15 @@ const GlobalStyle = createGlobalStyle`
             color: var(--blue);
             padding: 0px 1rem;
             cursor: pointer;
+        }
 
-        
+        .item__wrapper {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            background-color: pink;
+            color: var(--white);
         }
     }
 
