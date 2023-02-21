@@ -6,6 +6,7 @@ const variables = css`
         --light-purple: #B01674;
         --blue: #1C3870;
         --white: #FFFFFF;
+        --black: #000000;
 
         --dm-sans: 'DMSans', sans-serif;
         --informa: 'InformaPro', sans-serif;

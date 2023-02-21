@@ -20,6 +20,7 @@ const StyledBanner = styled.div`
         font-size: 12px;
         text-decoration: underline;
         margin-left: 1rem;
+        cursor: pointer;
     }
 
     .arrow {

@@ -5,6 +5,7 @@ import Arrow from "@/assets/button-arrow.svg";
 import Hamburger from "@/components/Hamburger";
 import { AiOutlineUser } from "react-icons/ai";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { IoIosArrowDown } from "react-icons/io";
 
 function Navbar() {
   return (
@@ -21,6 +22,7 @@ function Navbar() {
                 </li>
                 <li>
                     <span>ATTRACTIONS</span>
+                    <IoIosArrowDown />
                 </li>
                 <li>
                     <span>PARTIES</span>
