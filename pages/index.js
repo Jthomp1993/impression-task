@@ -6,9 +6,21 @@ export default function Home() {
     <>
       <Layout>
             <Carousel>
-                <CarouselItem>Item 1</CarouselItem>
-                <CarouselItem>Item 2</CarouselItem>
-                <CarouselItem>Item 3</CarouselItem>
+                <CarouselItem>
+                    <div className='carousel__img'>
+                        
+                    </div>
+                </CarouselItem>
+                <CarouselItem>
+                    <div className='carousel__img'>
+                        
+                    </div>
+                </CarouselItem>
+                <CarouselItem>
+                    <div className='carousel__img'>
+                        
+                    </div>
+                </CarouselItem>
             </Carousel>
       </Layout>
     </>

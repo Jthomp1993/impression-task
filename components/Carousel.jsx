@@ -3,23 +3,36 @@ import { useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import styled from 'styled-components';
 import Arrow from '@/assets/carousel-arrow.svg';
-
-
+import img from '@/public/header.png';
 
 const StyledCarouselItem = styled.div`
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
-    background-color: pink;
+    height: 65vh;
     color: var(--white);
-    
-    
+
+    .carousel__img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-image: url(${img.src});
+        background-size: cover;
+        background-position: bottom; 
+    }
+
+    @media (min-width: 1024px) {
+        height: 100vh;
+    }
 `;
 
+
 const StyledCarousel = styled.div`
-    overflow: hidden;
     position: relative;
+
+    @media(max-width: 1024px) {
+        padding-top: 200px;
+    }
 
     .inner {
         white-space: nowrap;
@@ -30,8 +43,12 @@ const StyledCarousel = styled.div`
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 50%;
-        right: 0;
+        top: 80%;
+        right: 1rem;
+
+        @media(min-width: 1024px) {
+            top: 40%;
+        }
 
         .rotate {
             transform: rotate(180deg);
@@ -67,6 +84,7 @@ const Carousel = ({ children }) => {
         setActiveIndex(newIndex);
     }
 
+    {/** Enable swiping on touch devices */}
     const handlers = useSwipeable({
         onSwipedLeft: () => updateIndex(activeIndex + 1),
         onSwipedRight: () => updateIndex(activeIndex - 1)

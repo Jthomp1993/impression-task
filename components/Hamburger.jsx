@@ -87,7 +87,6 @@ function Hamburger() {
     const toggleIsActive = () => {
         setIsActive(!isActive);
     }
-    console.log(isActive);
 
   return (
     <StyledHamburger>
