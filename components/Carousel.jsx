@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { useSwipeable } from 'react-swipeable';
 import styled from 'styled-components';
 import Arrow from '@/assets/carousel-arrow.svg';
 
@@ -66,8 +67,13 @@ const Carousel = ({ children }) => {
         setActiveIndex(newIndex);
     }
 
+    const handlers = useSwipeable({
+        onSwipedLeft: () => updateIndex(activeIndex + 1),
+        onSwipedRight: () => updateIndex(activeIndex - 1)
+    });
+
   return (
-    <StyledCarousel>
+    <StyledCarousel {...handlers}>
         <div className="inner" style={{ transform: `translate(-${activeIndex * 100}%)`}}>
             {React.Children.map(children, (child, index) => {
                 return React.cloneElement(child, { width: '100%' });
