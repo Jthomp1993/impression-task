@@ -3,9 +3,13 @@ import { useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import styled from 'styled-components';
 import Arrow from '@/public/assets/carousel-arrow.svg';
+import WhiteArrow from '@/public/assets/button-arrow-white.svg';
+import BlueArrow from '@/public/assets/button-arrow.svg';
 import img from '@/public/header.png';
 
+
 const StyledCarouselItem = styled.div`
+    position: relative;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -38,6 +42,39 @@ const StyledCarouselItem = styled.div`
     }
 `;
 
+const StyledOverlay = styled.div`
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+
+    .content {
+        padding: 2rem;
+        margin-left: 5rem;
+        max-width: 600px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        font-family: var(--informa);
+
+        h2 {
+            font-size: 62px;
+            margin: 0;
+            line-height: 0.9;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            align-items: center;
+            margin-top: 2rem;
+        }
+    }
+`;
 
 const StyledCarousel = styled.div`
     position: relative;
@@ -57,6 +94,7 @@ const StyledCarousel = styled.div`
         position: absolute;
         top: 80%;
         right: 1rem;
+        z-index: 9999;
 
         @media(min-width: 1024px) {
             top: 40%;
@@ -77,9 +115,28 @@ const StyledCarousel = styled.div`
 
 export const CarouselItem = ({ children, width }) => {
   return (
-    <StyledCarouselItem style={{ width: width, color: 'red' }}>
+    <>
+    <StyledCarouselItem style={{ width: width }}>
         { children }
+        <StyledOverlay>
+        
+            <div className="content">
+                <h2>FUN PARTIES FOR ALL THE FAMILY</h2>
+                <p>Fun for all the family, from £4 per session.</p>
+                <div className="buttons">
+                    <span className='pill__btn__secondary'>
+                        MAKE A BOOKING 
+                        <WhiteArrow />
+                    </span>
+                    <span className='pill__btn__primary'>
+                        MAKE A BOOKING 
+                        <BlueArrow />
+                    </span>
+                </div>
+            </div>
+        </StyledOverlay>
     </StyledCarouselItem>
+    </>
   )
 }
 
@@ -103,6 +160,7 @@ const Carousel = ({ children }) => {
     });
 
   return (
+    <>
     <StyledCarousel {...handlers}>
         <div className="inner" style={{ transform: `translate(-${activeIndex * 100}%)`}}>
             {React.Children.map(children, (child, index) => {
@@ -118,6 +176,7 @@ const Carousel = ({ children }) => {
             </button>
         </div>
     </StyledCarousel> 
+    </>
   )
 }
 

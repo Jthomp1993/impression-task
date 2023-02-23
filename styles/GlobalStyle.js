@@ -57,6 +57,38 @@ const GlobalStyle = createGlobalStyle`
             cursor: pointer;
         }
 
+        .pill__btn__primary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-width: 200px;
+            font-family: var(--informa);
+            font-weight: 800;
+            background-color: var(--white);
+            color: var(--blue);
+            font-size: 16px;
+            border-radius: 50px;
+            padding: 1rem 1rem;
+            margin-right: 1rem;
+            cursor: pointer;
+        }
+
+        .pill__btn__secondary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-width: 200px;
+            font-family: var(--informa);
+            font-weight: 800;
+            background-color: var(--dark-purple);
+            color: var(--white);
+            font-size: 16px;
+            border-radius: 50px;
+            padding: 1rem 1rem;
+            margin-right: 1rem;
+            cursor: pointer;
+        }
+
         .item__wrapper {
             display: inline-flex;
             justify-content: center;
@@ -65,6 +97,7 @@ const GlobalStyle = createGlobalStyle`
             background-color: pink;
             color: var(--white);
         }
+
     }
 
 `;
