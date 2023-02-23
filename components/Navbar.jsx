@@ -1,7 +1,7 @@
 import StyledNavbar from "@/styles/StyledNavbar"
 import Image from "next/image";
-import logo from "@/assets/logo.png";
-import Arrow from "@/assets/button-arrow.svg";
+import logo from "@/public/assets/logo.png";
+import Arrow from "@/public/assets/button-arrow.svg";
 import Hamburger from "@/components/Hamburger";
 import { AiOutlineUser } from "react-icons/ai";
 import { AiOutlineShoppingCart } from "react-icons/ai";

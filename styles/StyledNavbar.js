@@ -63,7 +63,7 @@ const StyledNavbar = styled.nav`
 
         span:after {
             content: '';
-            height: 2px;
+            height: 3px;
             background-color: var(--white);
             width: 0%;
             display: block;

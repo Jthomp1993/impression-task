@@ -7,6 +7,13 @@ export default function Home() {
       <Layout>
             <Carousel>
                 <CarouselItem>
+                    <div className='carousel__vid'>
+                        <video src="/yeah-days-out.mp4" autoPlay loop muted>
+                            
+                        </video>
+                    </div>
+                </CarouselItem>
+                <CarouselItem>
                     <div className='carousel__img'>
                         
                     </div>

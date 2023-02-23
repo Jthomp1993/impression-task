@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import styled from 'styled-components';
-import Arrow from '@/assets/carousel-arrow.svg';
+import Arrow from '@/public/assets/carousel-arrow.svg';
 import img from '@/public/header.png';
 
 const StyledCarouselItem = styled.div`
@@ -11,6 +11,18 @@ const StyledCarouselItem = styled.div`
     align-items: center;
     height: 65vh;
     color: var(--white);
+
+    .carousel__vid {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 
     .carousel__img {
         position: relative;
@@ -36,7 +48,7 @@ const StyledCarousel = styled.div`
 
     .inner {
         white-space: nowrap;
-        transition: transform 0.3s;
+        transition: transform 0.5s;
     }
 
     .indicators {
