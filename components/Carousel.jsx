@@ -6,6 +6,7 @@ import Arrow from '@/public/assets/carousel-arrow.svg';
 import WhiteArrow from '@/public/assets/button-arrow-white.svg';
 import BlueArrow from '@/public/assets/button-arrow.svg';
 import img from '@/public/header.png';
+import Splodge from '@/public/assets/splodge1.svg';
 
 
 const StyledCarouselItem = styled.div`
@@ -51,6 +52,7 @@ const StyledOverlay = styled.div`
     height: 100vh;
 
     .content {
+        position: relative;
         padding: 2rem;
         margin-left: 5rem;
         max-width: 600px;
@@ -71,7 +73,17 @@ const StyledOverlay = styled.div`
         .buttons {
             display: flex;
             align-items: center;
-            margin-top: 2rem;
+            margin: 2rem 0;
+        }
+    }
+
+    .splodge {
+        position: absolute;
+        bottom: -60px;
+        right: 0;
+
+        svg {
+            transform: rotate(-160deg);
         }
     }
 `;
@@ -113,27 +125,36 @@ const StyledCarousel = styled.div`
 `;
 
 
-export const CarouselItem = ({ children, width }) => {
+export const CarouselItem = ({ children, width, heading, info, btn1, btn2 }) => {
   return (
     <>
     <StyledCarouselItem style={{ width: width }}>
         { children }
+
         <StyledOverlay>
-        
-            <div className="content">
-                <h2>FUN PARTIES FOR ALL THE FAMILY</h2>
-                <p>Fun for all the family, from £4 per session.</p>
+            {heading && info && btn1 && btn2 && (
+                <div className="content">
+                <h2>{heading}</h2>
+                <p>{info}</p>
                 <div className="buttons">
+                    {btn1 && (
                     <span className='pill__btn__secondary'>
-                        MAKE A BOOKING 
+                        {btn1}
                         <WhiteArrow />
                     </span>
-                    <span className='pill__btn__primary'>
-                        MAKE A BOOKING 
+                    )}
+                    {btn2 && (
+                        <span className='pill__btn__primary'>
+                        {btn2}
                         <BlueArrow />
                     </span>
+                    )}
                 </div>
+                <div className="splodge">
+                <Splodge />
             </div>
+            </div>
+            )} 
         </StyledOverlay>
     </StyledCarouselItem>
     </>
