@@ -22,12 +22,11 @@ export default function Home() {
                         
                     </div>
                 </CarouselItem>
-                <CarouselItem>
-                    <div className='carousel__img'>
-                        
-                    </div>
-                </CarouselItem>
-                <CarouselItem>
+                <CarouselItem
+                heading='CRYSTAL MAZE MEETS NINJA WARRIOR'
+                info='Gamified obstacle course for all ages.'
+                btn1='FIND OUT MORE'
+                btn2='CONTACT US'>
                     <div className='carousel__img'>
                         
                     </div>

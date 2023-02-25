@@ -42,6 +42,21 @@ const GlobalStyle = createGlobalStyle`
             z-index: 999999;
         }
 
+        .nav__btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-width: 200px;
+            font-family: var(--informa);
+            font-weight: 800;
+            font-size: 16px;
+            border-radius: 50px;
+            background-color: var(--white);
+            color: var(--blue);
+            padding: 0px 1rem;
+            cursor: pointer;
+        }
+
         .pill__btn__primary {
             display: flex;
             align-items: center;

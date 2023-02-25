@@ -38,7 +38,7 @@ function Navbar() {
         </div>
 
         <div className="nav__btns">
-            <span className="pill__btn booking__btn">
+            <span className="nav__btn booking__btn">
                 MAKE A BOOKING
                 <Arrow />
             </span>
