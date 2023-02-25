@@ -42,51 +42,58 @@ const GlobalStyle = createGlobalStyle`
             z-index: 999999;
         }
 
-        .pill__btn {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            min-width: 200px;
-            font-family: var(--informa);
-            font-weight: 800;
-            font-size: 16px;
-            border-radius: 50px;
-            background-color: var(--white);
-            color: var(--blue);
-            padding: 0px 1rem;
-            cursor: pointer;
-        }
-
         .pill__btn__primary {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            min-width: 200px;
+            justify-content: center;
             font-family: var(--informa);
             font-weight: 800;
             background-color: var(--white);
             color: var(--blue);
-            font-size: 16px;
+            font-size: 14px;
             border-radius: 50px;
-            padding: 1rem 1rem;
-            margin-right: 1rem;
+            margin-right: 10px;
+            padding: 1rem;
             cursor: pointer;
+
+            @media (max-width: 475px) {
+                width: 100%;
+            }
+
+            @media (min-width: 475px) {
+                min-width: 200px;
+            }
+
+            @media (min-width: 1024px) {
+                justify-content: space-between;
+            }
         }
 
         .pill__btn__secondary {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            min-width: 200px;
+            justify-content: center;
             font-family: var(--informa);
             font-weight: 800;
-            background-color: var(--dark-purple);
+            background-color: var(--light-purple);
             color: var(--white);
-            font-size: 16px;
+            font-size: 14px;
             border-radius: 50px;
-            padding: 1rem 1rem;
-            margin-right: 1rem;
+            padding: 1rem;
+            margin-right: 10px;
             cursor: pointer;
+
+            @media (max-width: 475px) {
+                width: 100%;
+            }
+
+            @media (min-width: 475px) {
+                min-width: 200px;
+            }
+
+            @media (min-width: 1024px) {
+                justify-content: space-between;
+            }
         }
 
         .item__wrapper {

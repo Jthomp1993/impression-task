@@ -45,25 +45,37 @@ const StyledCarouselItem = styled.div`
 
 const StyledOverlay = styled.div`
     display: flex;
-    align-items: center;
+    align-items: start;
     position: absolute;
-    top: 0;
+    top: -100px;
+    left: 0;
     width: 100%;
     height: 100vh;
 
+    @media (min-width: 1024px) {
+        top: 0;
+        align-items: center;
+    }
+
     .content {
         position: relative;
-        padding: 2rem;
-        margin-left: 5rem;
         max-width: 600px;
+        padding: 2rem 10px;
         white-space: pre-wrap;
         word-wrap: break-word;
         font-family: var(--informa);
 
+        @media (min-width: 1024px) {
+            padding: 2rem;
+            margin-left: 5rem;
+            max-width: 600px;
+        }
+
         h2 {
-            font-size: 62px;
+            font-size: clamp(45px, 7vw, 62px);
             margin: 0;
-            line-height: 0.9;
+            line-height: 1;
+            word-wrap: break-word;
         }
 
         p {
@@ -74,6 +86,12 @@ const StyledOverlay = styled.div`
             display: flex;
             align-items: center;
             margin: 2rem 0;
+
+            @media (max-width: 1024px) {
+                svg {
+                    display: none;
+                }
+            }
         }
     }
 
@@ -84,6 +102,10 @@ const StyledOverlay = styled.div`
 
         svg {
             transform: rotate(-160deg);
+        }
+
+        @media (max-width: 1024px) {
+            display: none;
         }
     }
 `;
@@ -121,6 +143,8 @@ const StyledCarousel = styled.div`
             border: none;
             cursor: pointer;
         }
+
+        
     }
 `;
 
@@ -137,18 +161,14 @@ export const CarouselItem = ({ children, width, heading, info, btn1, btn2 }) => 
                 <h2>{heading}</h2>
                 <p>{info}</p>
                 <div className="buttons">
-                    {btn1 && (
                     <span className='pill__btn__secondary'>
                         {btn1}
                         <WhiteArrow />
                     </span>
-                    )}
-                    {btn2 && (
                         <span className='pill__btn__primary'>
                         {btn2}
                         <BlueArrow />
-                    </span>
-                    )}
+                    </span>    
                 </div>
                 <div className="splodge">
                 <Splodge />
