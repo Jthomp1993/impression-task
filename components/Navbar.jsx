@@ -61,7 +61,10 @@ function Navbar() {
             </div>
         </div>
     </StyledNavbar>
-    <Menu />
+    
+    {isActive && (
+        <Menu />
+    )}
     </>
   )
 }

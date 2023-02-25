@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useLayoutEffect } from "react";
+import { useEffect } from "react";
 import { gsap } from 'gsap';
 
 const StyledBall = styled.div`
@@ -15,12 +15,16 @@ const StyledBall = styled.div`
         left: 0;
         transform: translate(-50%, -50%);
         mix-blend-mode: difference;
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
     }
 `;
 
 const Ball = () => {
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         const ball = document.querySelector(".ball");
         gsap.set(".ball", {xPercent: -50, yPercent: -50});
         const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
