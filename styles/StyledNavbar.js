@@ -28,6 +28,7 @@ const StyledNavbar = styled.nav`
     .mobile__brand {
         height: 100%;
         margin-top: 1rem;
+        z-index: 9999999;
 
         @media(min-width: 1024px) {
             display: none;

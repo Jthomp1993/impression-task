@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import AppContext from "@/context/AppContext";
 
 const StyledHamburger = styled.div`
     position: absolute;
@@ -82,7 +83,7 @@ const StyledHamburger = styled.div`
 `;
 
 function Hamburger() {
-    const [isActive, setIsActive] = useState(false);
+    const { isActive, setIsActive } = useContext(AppContext)
 
     const toggleIsActive = () => {
         setIsActive(!isActive);

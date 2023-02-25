@@ -4,8 +4,6 @@ import { gsap } from 'gsap';
 
 const StyledBall = styled.div`
 
-    mix-blend-mode: difference;
-
     .ball {
         background-color: var(--white);
         width: 20px;
@@ -16,6 +14,7 @@ const StyledBall = styled.div`
         top: 0;
         left: 0;
         transform: translate(-50%, -50%);
+        mix-blend-mode: difference;
     }
 `;
 
