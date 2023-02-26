@@ -20,7 +20,7 @@ const StyledMenu = styled.div.attrs({
         justify-content: space-between;
         height: 400px;
         list-style: none;
-        counter-reset: my-awesome-counter;
+        counter-reset: my-counter;
 
         .menu__item {
             display: flex;
@@ -33,7 +33,7 @@ const StyledMenu = styled.div.attrs({
             position: relative;
             overflow: hidden;
             transition: .5s;
-            counter-increment: my-awesome-counter;
+            counter-increment: my-counter;
            
             .item {
                 display: block;
@@ -45,7 +45,7 @@ const StyledMenu = styled.div.attrs({
         }
 
         span::before {
-            content: "0" counter(my-awesome-counter);
+            content: "0" counter(my-counter);
             font-size: 12px;
             margin-right: 10px;
         }

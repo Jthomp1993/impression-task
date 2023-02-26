@@ -54,6 +54,11 @@ const GlobalStyle = createGlobalStyle`
             color: var(--blue);
             padding: 0px 1rem;
             cursor: pointer;
+            transition: .5s;
+        }
+
+        .nav__btn:hover {
+            background-color: #BCBCBC;
         }
 
         .pill__btn__primary {
@@ -69,6 +74,7 @@ const GlobalStyle = createGlobalStyle`
             margin-right: 10px;
             padding: 1rem;
             cursor: pointer;
+            transition: .5s;
 
             @media (max-width: 475px) {
                 width: 100%;
@@ -81,6 +87,10 @@ const GlobalStyle = createGlobalStyle`
             @media (min-width: 1024px) {
                 justify-content: space-between;
             }
+        }
+
+        .pill__btn__primary:hover {
+            background-color: #BCBCBC;
         }
 
         .pill__btn__secondary {
@@ -96,6 +106,7 @@ const GlobalStyle = createGlobalStyle`
             padding: 1rem;
             margin-right: 10px;
             cursor: pointer;
+            transition: .5s;
 
             @media (max-width: 475px) {
                 width: 100%;
@@ -108,6 +119,10 @@ const GlobalStyle = createGlobalStyle`
             @media (min-width: 1024px) {
                 justify-content: space-between;
             }
+        }
+
+        .pill__btn__secondary:hover {
+            background-color: #830E55;
         }
 
         .item__wrapper {
