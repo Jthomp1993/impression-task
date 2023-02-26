@@ -1,6 +1,7 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import AppContext from '@/context/AppContext';
 import StyledNavbar from "@/styles/StyledNavbar"
+import StyledHamburger from '@/styles/StyledHamburger';
 import Image from "next/image";
 import logo from "@/public/assets/logo.png";
 import Arrow from "@/public/assets/button-arrow.svg";
@@ -12,16 +13,14 @@ import { IoIosArrowDown } from "react-icons/io";
 
 
 function Navbar() {
-    const { isActive } = useContext(AppContext);
-
-    const toggleMenu = () => {
-        console.log('Menu open');
-    }
+    const { setMenu, menu, closeMenu, openMenu } = useContext(AppContext);
 
   return (
     <>
     <StyledNavbar>
+        <StyledHamburger onClick={menu ? closeMenu : openMenu}>
             <Hamburger />
+        </StyledHamburger>
         <div className="brand">
             <Image src={logo} width={120} alt="Yeah! logo" />
         </div>
@@ -61,8 +60,8 @@ function Navbar() {
             </div>
         </div>
     </StyledNavbar>
-    
-    {isActive && (
+
+    {menu && (
         <Menu />
     )}
     </>

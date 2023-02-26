@@ -1,11 +1,14 @@
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
 import StyledMenu from "@/styles/StyledMenu";
 import { gsap } from 'gsap';
+import AppContext from "@/context/AppContext";
+
 
 const Menu = () => {
+    const { closeMenu, setCloseMenu } = useContext(AppContext);
 
     useEffect(() => {
-        gsap.fromTo('.menu__wrapper', {
+        gsap.fromTo('#menu__wrapper', {
             yPercent: 100,
         },
         {
@@ -14,10 +17,11 @@ const Menu = () => {
             duration: 1.7
         });
 
-        gsap.set('.item', { yPercent: 100 });
+        gsap.set('.item', { yPercent: 100, autoAlpha: 0 });
         setTimeout(() => {
             gsap.to('.item', {
                 yPercent: 0,
+                autoAlpha: 1,
                 duration: 2.3,
                 ease: 'expo.out',
                 stagger: .06
@@ -28,7 +32,7 @@ const Menu = () => {
 
   return (
     <StyledMenu>
-        <ul className="menu__list">
+        <ol className="menu__list">
             <li className="menu__item">
                 <span className="item">HOME</span>
             </li>
@@ -47,7 +51,7 @@ const Menu = () => {
             <li className="menu__item">
                 <span className="item">CONTACT</span>
             </li>
-        </ul>
+        </ol>
     </StyledMenu>
   )
 }
