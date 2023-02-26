@@ -1,9 +1,39 @@
+import { useEffect } from 'react';
 import Head from "next/head";
 import Banner from "@/components/Banner";
 import Navbar from "@/components/Navbar";
 import Ball from "@/components/Ball";
+import Lenis from '@studio-freight/lenis'
 
 function Layout({ title, keywords, description, children}) {
+
+    useEffect(() => {
+        const lenis = new Lenis({
+            duration: 2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+          })
+          
+        //get scroll value
+        lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
+        console.log({ scroll, limit, velocity, direction, progress })
+        });
+        
+        function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf);
+        }
+        
+        requestAnimationFrame(raf);
+
+    },[]);
+
   return (
     <div>
         {/* If the application was to have pages in addition to the home page, they could be wrapped in this layout component and have custom meta data passed in as props.  */}
