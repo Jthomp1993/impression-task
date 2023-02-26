@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const StyledCarousel = styled.div`
     position: relative;
+    background-color: var(--purple);
 
     @media(max-width: 1024px) {
         padding-top: 200px;
@@ -62,7 +63,7 @@ const StyledCarousel = styled.div`
             height: 12px;
             width: 12px;
             border-radius: 50px;
-            background-color: var(--purple);
+            background-color: var(--light-purple);
         }
 
         .active__blob {

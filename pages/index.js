@@ -1,7 +1,24 @@
+import { useEffect } from 'react';
 import Layout from '@/components/Layout';
 import Carousel, { CarouselItem } from '@/components/Carousel';
+import StyledContent from '@/styles/StyledContent';
+import Splodge from '@/public/assets/splodge1.svg';
+import SplodgeTwo from '@/public/assets/splodge2.svg';
+import { getSortedPostsData } from '@/lib/content';
 
-export default function Home() {
+{/** Get the data from the markdown file using static props */}
+export async function getStaticProps() {
+    const allContentData = getSortedPostsData();
+    return {
+        props: {
+            allContentData,
+        },
+    };
+}
+
+
+export default function Home({ allContentData }) {
+
   return (
     <>
       <Layout>
@@ -32,6 +49,17 @@ export default function Home() {
                     </div>
                 </CarouselItem>
             </Carousel>
+            <StyledContent>
+                <div className="info">
+                    <p>{allContentData[0].content}</p>
+                    <div className="splodge__one">
+                        <Splodge />
+                    </div>
+                    <div className="splodge__two">
+                        <SplodgeTwo />
+                    </div>
+                </div>
+            </StyledContent>
       </Layout>
     </>
   )

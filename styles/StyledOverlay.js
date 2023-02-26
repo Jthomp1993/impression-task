@@ -61,6 +61,10 @@ const StyledOverlay = styled.div`
             transform: rotate(-160deg);
         }
 
+        svg path {
+            fill: var(--white);
+        }
+
         @media (max-width: 1024px) {
             display: none;
         }
