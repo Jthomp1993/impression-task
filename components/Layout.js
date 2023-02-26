@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import Head from "next/head";
 import Banner from "@/components/Banner";
 import Navbar from "@/components/Navbar";
-import Ball from "@/components/Ball";
 import Lenis from '@studio-freight/lenis'
 
 function Layout({ title, keywords, description, children}) {
@@ -40,7 +39,6 @@ function Layout({ title, keywords, description, children}) {
         <div className="navigation">
         <Banner />
         <Navbar />
-        <Ball />
         </div>
         
 

@@ -15,6 +15,7 @@ const StyledBall = styled.div`
         left: 0;
         transform: translate(-50%, -50%);
         mix-blend-mode: difference;
+        z-index: 99999999999;
 
         @media (max-width: 1024px) {
             display: none;

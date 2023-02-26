@@ -30,6 +30,10 @@ const StyledNavbar = styled.nav`
         margin-top: 1rem;
         z-index: 9999999;
 
+        @media (max-width: 350px) {
+            display: none;
+        }
+
         @media(min-width: 1024px) {
             display: none;
         }
