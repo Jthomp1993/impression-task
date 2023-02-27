@@ -36,6 +36,12 @@ const StyledCarousel = styled.div`
             border: none;
             cursor: pointer;
         }
+
+        @media (max-width: 1024px) {
+            svg {
+                width: 60px;
+            }
+        }
     }
 
     .pagination {
