@@ -31,6 +31,7 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head> 
+        
             <meta name="image" content="/og.png" />
             <meta property="og:title" content="Yeah! Days Out" />
             <meta property="og:description" content="Yeah! Days Out | Fun for all the family." />
