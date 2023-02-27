@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-const StyledNavbar = styled.nav`
+const StyledNavbar = styled.nav.attrs({
+    className: 'nav__class'
+})`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -121,6 +123,7 @@ const StyledNavbar = styled.nav`
 
                 span {
                     display: block;
+                    transition: .5s;
                 }
 
                 span:hover {

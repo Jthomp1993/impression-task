@@ -2,8 +2,10 @@ import styled from "styled-components";
 
 const StyledCarousel = styled.div`
     position: relative;
-    background-color: var(--purple);
+    background: rgb(120,45,112);
+    background: linear-gradient(0deg, rgba(120,45,112,1) 47%, rgba(57,28,58,1) 54%);    
 
+    
     @media(max-width: 1024px) {
         padding-top: 200px;
     }

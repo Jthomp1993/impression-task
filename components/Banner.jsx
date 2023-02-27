@@ -8,6 +8,7 @@ const StyledBanner = styled.div`
     width: 100%;
     background-color: var(--light-purple);
     margin: 0;
+    z-index: 9999999999999;
 
     p {
         margin: 5px 0;

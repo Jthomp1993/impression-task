@@ -11,6 +11,7 @@ import { AiOutlineUser } from "react-icons/ai";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { IoIosArrowDown } from "react-icons/io";
 import { gsap } from 'gsap';
+import ClickAwayListener from 'react-click-away-listener';
 
 
 function Navbar() {
@@ -19,7 +20,7 @@ function Navbar() {
 
     useEffect(() => {
         gsap.set('.dropdown', { autoAlpha: 0, yPercent: 20 });
-    })
+    },[]);
     const openDropdown = () => {
         gsap.set('.dropdown', { autoAlpha: 0, yPercent: 20 });
         setDropdown(true);
@@ -42,6 +43,7 @@ function Navbar() {
         setDropdown(false);
     }
 
+
   return (
     <>
     <StyledNavbar>
@@ -57,10 +59,12 @@ function Navbar() {
                 <li className='nav__item'>
                     <span className='nav__span'>HOME</span>
                 </li>
+                <ClickAwayListener onClickAway={closeDropdown}>
                 <li className='nav__item' onClick={dropdown ? closeDropdown : openDropdown}>
                     <div className="dropdown__wrapper">
                         <span className='nav__span'>ATTRACTIONS</span>
                         <IoIosArrowDown />
+                            
                             <div className="dropdown">
                                 <ul>
                                     <li>
@@ -74,8 +78,10 @@ function Navbar() {
                                     </li>
                                 </ul>
                             </div>
+                            
                     </div>
                 </li>
+                </ClickAwayListener>
                 <li className='nav__item'>
                     <span className='nav__span'>PARTIES</span>
                 </li>
