@@ -48,7 +48,7 @@ function Layout({ title, keywords, description, children}) {
 }
 
 Layout.defaultProps = {
-    title: "Yeah! | Fun parties for all the family",
+    title: "Yeah! Days Out | Fun parties for all the family",
     description: "Home to some of the newest family attractions in Kirklees, whether it's school holiday activities or fun for all the family, Yeah Days Out has you covered.",
     keywords: 'Fun, Activities, Family, Attractions, Parties'
 }
