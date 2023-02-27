@@ -1,6 +1,6 @@
 # Yeah! Days Out task for Impression Studio
 
-![Yeah! Image](/og.png)
+![Yeah! Image](public/og.png)
 
 <p>A web application for Yeah! Days Out built with <a href='https://nextjs.org/' target='_blank'>Next JS.</a></p>
 
