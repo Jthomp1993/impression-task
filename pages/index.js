@@ -48,6 +48,15 @@ export default function Home({ allContentData }) {
                         
                     </div>
                 </CarouselItem>
+                <CarouselItem
+                heading='GOLF BLENDED WITH FOOTBALL'
+                info='Players kick balls into holes in as few shots as possible.'
+                btn1='FIND OUT MORE'
+                btn2='CONTACT US'>
+                    <div className='carousel__img'>
+                        
+                    </div>
+                </CarouselItem>
             </Carousel>
             <StyledContent>
                 <div className="info">
