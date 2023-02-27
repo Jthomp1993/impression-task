@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
-const StyledBanner = styled.div`
+const StyledBanner = styled.div.attrs({
+    className: 'banner'
+})`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,6 +43,7 @@ const StyledBanner = styled.div`
 `;
 
 function Banner() {
+
   return (
     <StyledBanner>
         <p>Super Saver Discount for parties</p> <span><strong>Learn more </strong></span>

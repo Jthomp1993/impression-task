@@ -41,8 +41,8 @@ function Layout({ title, keywords, description, children}) {
         <Navbar />
         </div>
         
-
         {children}
+        
     </div>
   )
 }

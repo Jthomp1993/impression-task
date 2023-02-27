@@ -1,11 +1,8 @@
 import { useEffect, useContext } from "react";
 import StyledMenu from "@/styles/StyledMenu";
 import { gsap } from 'gsap';
-import AppContext from "@/context/AppContext";
-
 
 const Menu = () => {
-    const { closeMenu, setCloseMenu } = useContext(AppContext);
 
     useEffect(() => {
         gsap.fromTo('#menu__wrapper', {

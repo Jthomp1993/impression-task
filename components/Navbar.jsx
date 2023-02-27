@@ -12,7 +12,6 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { IoIosArrowDown } from "react-icons/io";
 import { gsap } from 'gsap';
 import ClickAwayListener from 'react-click-away-listener';
-import Account from '@/public/assets/account.svg';
 
 
 function Navbar() {
