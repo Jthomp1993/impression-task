@@ -21,7 +21,7 @@ const StyledContent = styled.div`
         p {
             font-family: var(--informa);
             font-weight: 600;
-            font-size: 38px;
+            font-size: clamp(26px, 5vw, 38px);
         }
     }
 

@@ -22,6 +22,11 @@ const StyledOverlay = styled.div`
         word-wrap: break-word;
         font-family: var(--informa);
 
+        @media (max-width: 568px) {
+            background: rgb(120,45,112);
+            background: linear-gradient(0deg, rgba(120,45,112,0) 22%, rgba(57,28,58,0.4724483543417367) 33%);
+        }
+
         @media (min-width: 1024px) {
             padding: 2rem;
             margin-left: 5rem;

@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import Layout from '@/components/Layout';
 import Carousel, { CarouselItem } from '@/components/Carousel';
 import StyledContent from '@/styles/StyledContent';
